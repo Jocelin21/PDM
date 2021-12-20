@@ -28,7 +28,7 @@ def salary_program(hourly_overtime_rate = 110000, monthly_basic_salary = 3800000
                     print("Please choose the allowance level from 1-3.")
 
                 else:
-                    #Allowance percentage = Level 1 = 5%, Level 2 = 1%, Level 3 = 15%}
+                    #Allowance percentage = {Level 1 = 5%, Level 2 = 1%, Level 3 = 15%}
                     allowance_list = [.05, .10, .15]
 
                     allowance = allowance_list[allowance_level-1] * monthly_basic_salary
