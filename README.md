@@ -5,10 +5,10 @@ Program Design Method
 The purpose of this project is to provide a reliable and efficient P2P protocol for data transfer and storage, using the UDP protocol and socket programming in Python. The project consists of the design and implementation of the protocol, the development of a demo application, testing and validation, and documentation.
 
 3. Scenario 3:
-<img src="https://cdn.discordapp.com/attachments/1090244781155823697/1090526112003674142/Sequence_Diagram_Case_3.png%22%3E">
+<img src="https://cdn.discordapp.com/attachments/1090244781155823697/1090526112003674142/Sequence_Diagram_Case_3.png">
 
 7. Scenario 7:
-<img src="https://cdn.discordapp.com/attachments/1090244781155823697/1090526160791814197/Sequence_Diagram_Case_7.png%22%3E">
+<img src="https://cdn.discordapp.com/attachments/1090244781155823697/1090526160791814197/Sequence_Diagram_Case_7.png">
 
 6. Three-way Handshake: The first VM sends a GET command to request a file from the second VM. The second VM responds with a POST command to accept the request and initiate the file transfer. The file transfer takes place with the exchange of data packets between the two VMs.
 
@@ -27,7 +27,7 @@ List of Steps
 11. On the second VM, type: "client ip= iperf -c <host ip address> -u -p <port number> -b 10m".
 
 - GET & POST
-    - If VM have two IP address:
+    a. If VM have two IP address:
     1. Establish a connection between both VMs.
     2. Run the get.py program on both VMs.
     3. Enter the IP address and port number on both VMs.
@@ -35,7 +35,8 @@ List of Steps
     5. Enter the name of the desired file to retrieve.
     6. Specify a new name for the file
     7. On the second VM, input the "POST" command within 5 seconds after completing step 4 to complete the file transfer. Note that if the command is not entered within the allotted time, the process will time out.
-    - If VM have one IP address:
+
+    b. If VM have one IP address:
     1. Establish a connection between both VMs.
     2. Run the get.py program on the first VM and get2.py on the second VM.
     3. Enter the IP address and port number on both VMs.
@@ -45,13 +46,13 @@ List of Steps
     7. On the second VM, input the "POST" command within 5 seconds after completing step 4 to complete the file transfer. Note that if the command is not entered within the allotted time, the process will time out. 
 
 - Packet Loss
-    - If VM have two IP address:
+    a. If VM have two IP address:
        1. Establish a connection between both VMs.
        2. Run the packetloss2.py program on both VMs.
        3. Enter the IP address and port number on both VMs.
        4. If packet loss (probability 0.25%) does not occur, cancel the program using the control+c command until packet loss is detected.
        5. Once packet loss is detected, try running the program again as you would with the get.py file to confirm proper functionality.
-    - If VM have one IP address:
+    b. If VM have one IP address:
        1. Establish a connection between both VMs.
        2. Run the packetloss2.py program on the first VM and packetloss3.py on the second VM.
        3. Enter the IP address and port number on both VMs.
